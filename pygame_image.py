@@ -6,8 +6,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
 def main():
-    pg.display.set_caption("はばたけ！こうかとん")
-    screen = pg.display.set_mode((800, 600))
+    pg.display.set_caption("はばたけ！こうかとん")  # ウィンドウタイトル
+    screen = pg.display.set_mode((800, 600))  # ウィンドウサイズ
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")  # 背景画像
     kk_img = pg.image.load("fig/3.png")  # こうかとん画像
@@ -18,6 +18,7 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
+        screen.blit(kk_img, [300, 200])
         pg.display.update()
         tmr += 1        
         clock.tick(10)
