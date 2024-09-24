@@ -35,18 +35,17 @@ def main():
 
 def move(rct):
     key_lst = pg.key.get_pressed()
-    # move_key = [pg.K_UP, pg.K_DOWN, pg.K_LEFT, pg.K_RIGHT]
+    x = -1
+    y = 0
     if key_lst[pg.K_UP]:
-        m = (0, -1)
+        y += 1
     elif key_lst[pg.K_DOWN]:
-        m = (0, 1)
+        y += -1
     elif key_lst[pg.K_LEFT]:
-        m = (-1, 0)
+        x += -1
     elif key_lst[pg.K_RIGHT]:
-        m = (2, 0)
-    else:
-        m = (-1, 0)
-    rct.move_ip(m)
+        x += 2
+    rct.move_ip(x, y)
     return rct
 
 if __name__ == "__main__":
