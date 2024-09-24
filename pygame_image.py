@@ -43,7 +43,9 @@ def move(rct):
     elif key_lst[pg.K_LEFT]:
         rct.move_ip(-1, 0)
     elif key_lst[pg.K_RIGHT]:
-        rct.move_ip(1, 0)
+        rct.move_ip(2, 0)
+    else:
+        rct.move_ip(-1, 0)
     return rct
 
 if __name__ == "__main__":
