@@ -38,9 +38,9 @@ def move(rct):
     x = -1
     y = 0
     if key_lst[pg.K_UP]:
-        y += 1
-    elif key_lst[pg.K_DOWN]:
         y += -1
+    elif key_lst[pg.K_DOWN]:
+        y += 1
     elif key_lst[pg.K_LEFT]:
         x += -1
     elif key_lst[pg.K_RIGHT]:
